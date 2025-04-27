@@ -17,8 +17,10 @@ import sys
 from types import FrameType
 
 from flask import Flask
+from flask import request
 
 from utils.logging import logger
+from kh2rando.seed_gen import generator
 
 app = Flask(__name__)
 
@@ -30,8 +32,19 @@ def hello() -> str:
 
     # https://cloud.google.com/run/docs/logging#correlate-logs
     logger.info("Child logger with trace Id.")
+    
+    request_json = request.get_json(silent=True)
+    request_args = request.args
 
-    return "Hello, KH2 Rando World!"
+    if request_json and 'preset' in request_json:
+        preset = request_json['preset']
+    elif request_args and 'preset' in request_args:
+        preset = request_args['preset']
+    else:
+        preset = 'League Summer 2025'
+    
+    seed_info = generator.make_random_seed_from_preset_name(preset)
+    return seed_info.generator_string
 
 
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
