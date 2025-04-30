@@ -2,7 +2,7 @@ import functions_framework
 from kh2rando.seed_gen import generator
 
 @functions_framework.http
-def respond_to_http(request):
+def kh2_rando_seedgen(request):
     """HTTP Cloud Function.
     Args:
         request (flask.Request): The request object.
