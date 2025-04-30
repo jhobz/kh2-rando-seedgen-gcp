@@ -3,8 +3,8 @@ steps:
   args:
   - functions
   - deploy
-  - kh2-rando-seedgen
+  - kh2_rando_seedgen
   - --runtime=python39
-  - --source=.
+  # - --source=.
   - --trigger-http
-  # - --entry-point=respond_to_http
+  # - --entry-point=kh2_rando_seedgen
