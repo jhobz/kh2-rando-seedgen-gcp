@@ -3,7 +3,7 @@ steps:
   args:
   - functions
   - deploy
-  - kh2_rando_seedgen
+  - kh2r_gen_seed
   - --runtime=python39
   - --trigger-http # Needed for first deploy
   - --allow-unauthenticated # Will likely remove this after testing period
