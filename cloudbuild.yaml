@@ -7,4 +7,5 @@ steps:
   - --runtime=python39
   - --trigger-http # Needed for first deploy
   - --allow-unauthenticated # Will likely remove this after testing period
-logging: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY
