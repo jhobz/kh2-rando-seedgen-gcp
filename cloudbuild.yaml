@@ -5,6 +5,5 @@ steps:
   - deploy
   - kh2_rando_seedgen
   - --runtime=python39
-  # - --source=.
-  - --trigger-http
-  # - --entry-point=kh2_rando_seedgen
+  - --trigger-http # Needed for first deploy
+  - --allow-unauthenticated # Will likely remove this after testing period
