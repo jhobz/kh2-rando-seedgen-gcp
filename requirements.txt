@@ -1,9 +1,2 @@
-Flask==3.0.1
-gunicorn==23.0.0
-
-requests==2.32.0
-structlog==25.1.0
-
-google-auth==2.3.2
-
-kh2rando==0.0.8
+functions-framework==3.*
+kh2rando
