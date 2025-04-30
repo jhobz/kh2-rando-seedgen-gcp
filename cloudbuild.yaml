@@ -1,4 +1,4 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'kh2-rando-seedgen', '--runtime=python39', '--source=.', '--trigger-http']
+  args: ['functions', 'deploy', 'kh2-rando-seedgen', '--runtime=python39', '--source=.', '--trigger-http', '--entry-point=respond_to_http']
   # args: ['functions', 'deploy', 'kh2-rando-seedgen', '--runtime=python39', '--entry-point=respond_to_http', '--gen2', '--region=us-central1']
