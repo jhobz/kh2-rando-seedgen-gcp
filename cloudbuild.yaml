@@ -6,6 +6,7 @@ steps:
   - kh2r_gen_seed
   - --runtime=python39
   - --trigger-http # Needed for first deploy
+  - --timeout=3600
   # - --allow-unauthenticated # Will likely remove this after testing period
 options:
   logging: CLOUD_LOGGING_ONLY
